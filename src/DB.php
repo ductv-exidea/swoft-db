@@ -146,7 +146,7 @@ class DB
      * @throws ConnectionPoolException
      * @throws DbException
      */
-    private static function getConnectionFromPool(string $name): Connection
+    private static function getConnectionFromPool(string $name)
     {
         $pool = bean($name);
         if (!$pool instanceof Pool && !$pool instanceof \Swoft\Pgsql\Pool) {
