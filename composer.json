@@ -11,7 +11,7 @@
     "active record"
   ],
   "description": "swoft database component",
-  "homepage": "https://github.com/swoft-cloud/swoft-db",
+  "homepage": "https://github.com/ductv-exidea/swoft-db",
   "license": "Apache-2.0",
   "require": {
     "swoft/framework": "~2.0.0",

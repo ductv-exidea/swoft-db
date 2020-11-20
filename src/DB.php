@@ -149,7 +149,7 @@ class DB
     private static function getConnectionFromPool(string $name): Connection
     {
         $pool = bean($name);
-        if (!$pool instanceof Pool) {
+        if (!$pool instanceof Pool && !$pool instanceof \Swoft\Pgsql\Pool) {
             throw new DbException(sprintf('%s is not instance of pool', $name));
         }
 
