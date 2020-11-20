@@ -28,6 +28,11 @@ class Database
     const MYSQL = 'mysql';
 
     /**
+     * Postgresql driver name
+     */
+    const POSTGRESQL = 'pgsql';
+
+    /**
      * The Data Source Name, or DSN, contains the information required to connect to the database.
      * Please refer to the [PHP manual](http://php.net/manual/en/pdo.construct.php) on
      * the format of the DSN string.

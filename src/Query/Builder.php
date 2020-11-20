@@ -22,7 +22,9 @@ use Swoft\Db\Exception\DbException;
 use Swoft\Db\Pool;
 use Swoft\Db\Query\Grammar\Grammar;
 use Swoft\Db\Query\Grammar\MySqlGrammar;
+use Swoft\Db\Query\Grammar\PostgresGrammar;
 use Swoft\Db\Query\Processor\MySqlProcessor;
+use Swoft\Db\Query\Processor\PostgresProcessor;
 use Swoft\Db\Query\Processor\Processor;
 use Swoft\Stdlib\Contract\Arrayable;
 use Swoft\Stdlib\Helper\Arr;
@@ -248,14 +250,16 @@ class Builder implements PrototypeInterface
      * @var array
      */
     public $grammars = [
-        Database::MYSQL => MySqlGrammar::class
+        Database::MYSQL => MySqlGrammar::class,
+        Database::POSTGRESQL => PostgresGrammar::class,
     ];
 
     /**
      * @var array
      */
     public $processors = [
-        Database::MYSQL => MySqlProcessor::class
+        Database::MYSQL => MySqlProcessor::class,
+        Database::POSTGRESQL => PostgresProcessor::class,
     ];
 
     /**
